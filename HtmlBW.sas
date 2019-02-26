@@ -1,6 +1,10 @@
 proc template;                                                                
-   define style Styles.HTMLBlue;                                              
-      parent = styles.statistical;                                            
+   define style Styles.HTMLBW;                                              
+      parent = styles.statistical;  
+      class fonts                                                             
+         "Fonts used in the default style" /                                  
+         'TitleFont2' = ("<sans-serif>, Helvetica, sans-serif",4) 
+         'TitleFont' = ("<sans-serif>, Helvetica, sans-serif",5);
       class GraphColors /                                                     
          'gndata12' = cxECE8C4                                                
          'gndata11' = cxDBD8F8                                                
@@ -15,7 +19,7 @@ proc template;
          'gndata2' = cxE7B3B4                                                 
          'gndata1' = cxBBC2DC                                                 
          'gndata' = cxBBC2DC                                                  
-         'gofill' = cxFAFBFE                                                  
+         'gofill' = cxFFFFFF                                                  
          'gout2cend' = cx919191                                               
          'gout2cstart' = cxe9e9e9                                             
          'gblockheader' = cxcfd5de                                            
@@ -30,7 +34,7 @@ proc template;
          'gconramp3cneutral' = cx222222                                       
          'gconramp3cstart' = cx0E36AC                                         
          'gramp3cend' = cxD05B5B                                              
-         'gramp3cneutral' = cxFAFBFE                                          
+         'gramp3cneutral' = cxFFFFFF                                          
          'gramp3cstart' = cx667FA2                                            
          'gcontrollim' = cxE6F2FF                                             
          'gccontrollim' = cxBFC7D9                                            
@@ -43,41 +47,55 @@ proc template;
       class colors /                                                          
          'link2' = cx0000FF                                                   
          'link1' = cx800080                                                   
-         'docbg' = cxFAFBFE                                                   
-         'contentbg' = cxFAFBFE                                               
-         'systitlebg' = cxFAFBFE                                              
-         'titlebg' = cxFAFBFE                                                 
-         'proctitlebg' = cxFAFBFE                                             
+         'docbg' = cxFFFFFF                                                   
+         'contentbg' = cxFFFFFF                                               
+         'systitlebg' = cxFFFFFF                                              
+         'titlebg' = cxFFFFFF                                                 
+         'proctitlebg' = cxFFFFFF                                             
          'headerbg' = cxEDF2F9                                                
-         'captionbg' = cxFAFBFE                                               
-         'captionfg' = cx112277                                               
-         'bylinebg' = cxFAFBFE                                                
-         'notebg' = cxFAFBFE                                                  
-         'tablebg' = cxFAFBFE                                                 
-         'batchbg' = cxFAFBFE                                                 
-         'systitlefg' = cx112277                                              
-         'titlefg' = cx112277                                                 
-         'proctitlefg' = cx112277                                             
-         'bylinefg' = cx112277                                                
-         'notefg' = cx112277;                                                 
+         'captionbg' = cxFFFFFF                                               
+         'captionfg' = cx000000                                               
+         'bylinebg' = cxFFFFFF                                                
+         'notebg' = cxFFFFFF                                                  
+         'tablebg' = cxFFFFFF                                                 
+         'batchbg' = cxFFFFFF                                                 
+         'systitlefg' = cx000000                                              
+         'titlefg' = cx000000                                                 
+         'proctitlefg' = cx000000                                             
+         'bylinefg' = cx000000                                                
+         'notefg' = cx000000;                                                 
       class Header /                                                          
-         bordercolor = cxB0B7BB                                               
-         backgroundcolor = cxEDF2F9                                           
-         color = cx112277;                                                    
+         bordercolor = cx000000                                    
+         backgroundcolor = cxFFFFFF                                  
+         color = cx000000;                                                    
       class Footer /                                                          
-         bordercolor = cxB0B7BB                                               
-         backgroundcolor = cxEDF2F9                                           
-         color = cx112277;                                                    
+         bordercolor = cx000000                                    
+         backgroundcolor = cxFFFFFF                                  
+         color = cx000000;                                                    
       class RowHeader /                                                       
-         bordercolor = cxB0B7BB                                               
-         backgroundcolor = cxEDF2F9                                           
-         color = cx112277;                                                    
+         bordercolor = cx000000                                    
+         backgroundcolor = cxFFFFFF                                  
+         color = cx000000;                                                    
       class RowFooter /                                                       
-         bordercolor = cxB0B7BB                                               
-         backgroundcolor = cxEDF2F9                                           
-         color = cx112277;                                                    
+         bordercolor = cx000000                                    
+         backgroundcolor = cxFFFFFF                                  
+         color = cx000000;                                                    
       class Table /                                                           
+         bordertopwidth = 1px                                                 
+         borderleftwidth = 1px                                                
+         borderbottomwidth = 1px                                              
+         borderrightwidth = 1px                                               
+         bordercolor = cx000000                                               
          cellpadding = 5;                                                     
+      style Data /                                                            
+         font = fonts('DocFont')                                              
+         backgroundcolor = cxFFFFFF                                           
+         bordercolor = cx000000                                               
+         bordertopwidth = 1px                                                 
+         borderleftwidth = 1px                                                
+         borderbottomwidth = 1px                                              
+         borderrightwidth = 1px                                               
+         borderstyle = solid;                                                 
       class Graph /                                                           
          attrpriority = "Color";                                              
       class GraphFit2 /                                                       
